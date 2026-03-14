@@ -6,7 +6,7 @@ type PaymentMethod = 'pix' | 'card' | 'boleto';
 
 export default function App() {
   const [primaryColor, setPrimaryColor] = useState('#D1105A');
-  const [bgColor, setBgColor] = useState('#0A0A0A');
+  const [bgColor, setBgColor] = useState('#F9F9F9');
   const [showSettings, setShowSettings] = useState(false);
   const [timeLeft, setTimeLeft] = useState(600); // 10 minutes
   const [showSuccess, setShowSuccess] = useState(false);
@@ -282,24 +282,24 @@ export default function App() {
             style={{ rotateX, rotateY, transformStyle: "preserve-3d" }}
             onMouseMove={handleMouseMove}
             onMouseLeave={handleMouseLeave}
-            className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-[2.5rem] p-8 relative group"
+            className="bg-black/5 backdrop-blur-xl border border-black/5 rounded-[2.5rem] p-8 relative group"
           >
             <div 
               className="absolute inset-0 bg-gradient-to-br from-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity rounded-[2.5rem]" 
-              style={{ backgroundImage: `linear-gradient(to bottom right, ${primaryColor}33, transparent)` }}
+              style={{ backgroundImage: `linear-gradient(to bottom right, ${primaryColor}1A, transparent)` }}
             />
             
             <div style={{ transform: "translateZ(50px)" }} className="relative">
               <div className="flex items-center justify-between mb-6">
-                <span className="bg-white/10 text-white/60 text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-full border border-white/5">
+                <span className="bg-black/5 text-[#1A1A1A]/60 text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-full border border-black/5">
                   Premium Access
                 </span>
                 <div className="flex -space-x-2">
                   {[1,2,3,4].map(i => (
-                    <img key={i} src={`https://picsum.photos/seed/${i+10}/32/32`} className="w-6 h-6 rounded-full border-2 border-[#1A1A1A]" alt="user" referrerPolicy="no-referrer" />
+                    <img key={i} src={`https://picsum.photos/seed/${i+10}/32/32`} className="w-6 h-6 rounded-full border-2 border-white" alt="user" referrerPolicy="no-referrer" />
                   ))}
                   <div 
-                    className="w-6 h-6 rounded-full border-2 border-[#1A1A1A] flex items-center justify-center text-[8px] font-bold text-white"
+                    className="w-6 h-6 rounded-full border-2 border-white flex items-center justify-center text-[8px] font-bold text-white"
                     style={{ backgroundColor: primaryColor }}
                   >+842</div>
                 </div>
@@ -316,12 +316,12 @@ export default function App() {
                   <ShoppingCart className="text-white w-10 h-10" />
                 </div>
                 <div>
-                  <h3 className="text-white font-black text-3xl tracking-tighter leading-none mb-2">Teste do Lucas</h3>
+                  <h3 className="text-[#1A1A1A] font-black text-3xl tracking-tighter leading-none mb-2">Teste do Lucas</h3>
                   <div className="flex items-center gap-2">
-                    <div className="flex text-yellow-400">
+                    <div className="flex text-yellow-500">
                       {[1,2,3,4,5].map(i => <Star key={i} className="w-3 h-3 fill-current" />)}
                     </div>
-                    <span className="text-white/40 text-[10px] font-bold uppercase">4.9/5 (1.2k reviews)</span>
+                    <span className="text-[#1A1A1A]/40 text-[10px] font-bold uppercase">4.9/5 (1.2k reviews)</span>
                   </div>
                 </div>
               </div>
@@ -329,15 +329,15 @@ export default function App() {
               <div className="space-y-4">
                 <div className="flex items-end gap-3">
                   <p className="font-black text-5xl tracking-tighter" style={{ color: primaryColor }}>R$ 1,00</p>
-                  <p className="text-white/20 line-through text-xl font-bold mb-1">R$ 97,00</p>
+                  <p className="text-[#1A1A1A]/20 line-through text-xl font-bold mb-1">R$ 97,00</p>
                 </div>
-                <div className="bg-white/5 rounded-2xl p-4 border border-white/5">
-                  <p className="text-white/60 text-xs leading-relaxed italic">
+                <div className="bg-black/5 rounded-2xl p-4 border border-black/5">
+                  <p className="text-[#1A1A1A]/60 text-xs leading-relaxed italic">
                     "O melhor investimento que já fiz este ano. O suporte é incrível e o conteúdo superou todas as minhas expectativas!"
                   </p>
                   <div className="flex items-center gap-2 mt-3">
                     <img src="https://picsum.photos/seed/jane/24/24" className="w-6 h-6 rounded-full" alt="avatar" referrerPolicy="no-referrer" />
-                    <span className="text-white font-bold text-[10px] uppercase">Mariana Silva</span>
+                    <span className="text-[#1A1A1A] font-bold text-[10px] uppercase">Mariana Silva</span>
                   </div>
                 </div>
               </div>
@@ -345,13 +345,13 @@ export default function App() {
           </motion.div>
 
           {/* Satisfaction Seal */}
-          <div className="flex items-center gap-4 bg-white/5 border border-white/10 rounded-2xl p-4">
+          <div className="flex items-center gap-4 bg-black/5 border border-black/5 rounded-2xl p-4">
             <div className="w-12 h-12 rounded-full border-2 border-yellow-500/30 flex items-center justify-center">
               <div className="w-8 h-8 bg-yellow-500 rounded-full flex items-center justify-center text-[#1A1A1A] font-black text-[10px]">7D</div>
             </div>
             <div>
-              <p className="text-white font-bold text-xs uppercase tracking-wider">Garantia Incondicional</p>
-              <p className="text-white/40 text-[10px]">7 dias para testar ou seu dinheiro de volta.</p>
+              <p className="text-[#1A1A1A] font-bold text-xs uppercase tracking-wider">Garantia Incondicional</p>
+              <p className="text-[#1A1A1A]/40 text-[10px]">7 dias para testar ou seu dinheiro de volta.</p>
             </div>
           </div>
         </div>
